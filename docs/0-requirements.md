@@ -2,12 +2,12 @@
 
 ## Identified Problem or Need
 
-Replace this text with a clearly stated problem or need that exists that your project will attempt to solve / fulfil.
+Students at high school generally can have problems remembering their work they have to keep on top of. With assessments and work that piles up, having an app that stores it all will be so useful for kids our age.
 
 
 ## End-User Requirements
 
-Replace this text with a description of your typical end-users and their specific needs / expectations / requirements.
+Typical End-Users for this would be high schoolers with subjects that have assessments. This can also be used by adults with jobs too. They have the ability to put down work of their specific needs to keep track. They will be expecting for it all to work and there to be no issues with writing up work.
 
 
 ## Proposed Solution
