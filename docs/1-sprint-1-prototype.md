@@ -12,9 +12,9 @@ Develop a prototype that simulates the key functionality of the system, then tes
 
 ## Initial Database Design
 
-Replace this text with notes regarding the DB design.
+The base of how my Homework Tracker works. I will use the main page to send off in directions you want to go. For this its the base of your subjects and in each one is your work.
 
-![SCREENSHOT OF DB DESIGN](screenshots/example.png)
+![Alt text](image.png)
 
 
 ---
@@ -75,18 +75,18 @@ This Figma demo shows the UI with refinements applied:
 
 ### Testing
 
-Replace this text with notes about what you did to test the UI flow and the outcome of the testing.
+To do this I used all the feedback from V2 and used it to make the site a lot better for the users. I didn't finish colors 100% but had a sort of play around with what I might want to use.
+
+>(Liam) Looks good. Just needs colors to look better an eye popping but also easy on users eyes.
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
-
-*FIGMA IMPROVED REFINED PROTOTYPE - PLACE THE FIGMA EMBED CODE HERE - MAKE SURE IT IS SET SO THAT EVERYONE CAN ACCESS IT*
+I will change the colors to make the website look nice and not bland when it comes to doing the websites final version in the assessment.
 
 
 ---
 
 ## Sprint Review
 
-Replace this text with a statement about how the sprint has moved the project forward - key success point, any things that didn't go so well, etc.
+This sprint has moved the project forward as I have been able to use my end-users feedback to make my website better. They've given me help to add things I wouldn't even think up to add. So thanks to their feedback and critiques it has helped build up the websites and give it a ton of good features. It also helps as it's what they would want to see in an app for their homework tracker.
 
