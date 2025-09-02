@@ -1,0 +1,47 @@
+{#=====================================================
+  Thing page
+  - Shows details of a single thing
+  - Has a delete link to remove it
+=====================================================#}
+
+{% extends 'pages/base.jinja' %}
+
+
+{% block title %}
+
+    Homework for {{ subject.name }}
+
+{% endblock %}
+
+
+{% block content %}
+
+    <h1>Homework for {{ subject.name }}</h1>
+
+
+    <article>
+
+      <ul>
+            {% for assessment in assessments %}
+
+                <li>
+                        {{ assessment.name }} - {{ assessment.due_date }}
+            {% if assessment completed = ☑%}
+
+            {% else = ☐%}
+                </li>
+
+            {% else %}
+
+                <p>None!</p>
+
+            {% endfor %}
+        </ul>
+
+    </article>
+
+
+    <a role="button" href="/">Back to Subjects</a>
+
+{% endblock %}
+

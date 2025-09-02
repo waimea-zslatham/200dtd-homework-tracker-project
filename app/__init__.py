@@ -30,49 +30,46 @@ init_datetime(app)  # Handle UTC dates in timestamps
 #-----------------------------------------------------------
 @app.get("/")
 def index():
-    return render_template("pages/home.jinja")
-
-
-#-----------------------------------------------------------
-# About page route
-#-----------------------------------------------------------
-@app.get("/about/")
-def about():
-    return render_template("pages/about.jinja")
-
-
-#-----------------------------------------------------------
-# Things page route - Show all the things, and new thing form
-#-----------------------------------------------------------
-@app.get("/things/")
-def show_all_things():
     with connect_db() as client:
-        # Get all the things from the DB
-        sql = "SELECT id, name FROM things ORDER BY name ASC"
+        # Get all the subject from the DB
+        sql = "SELECT id, name, teacher, priority FROM subjects ORDER BY priority ASC"
         params = []
         result = client.execute(sql, params)
-        things = result.rows
+        subjects = result.rows
 
         # And show them on the page
-        return render_template("pages/things.jinja", things=things)
+        return render_template("pages/home.jinja", subjects=subjects)
 
 
 #-----------------------------------------------------------
-# Thing page route - Show details of a single thing
+# Subject page route - Show details of a single subject
 #-----------------------------------------------------------
-@app.get("/thing/<int:id>")
-def show_one_thing(id):
+@app.get("/subject/<int:id>")
+def show_subject(id):
     with connect_db() as client:
-        # Get the thing details from the DB
-        sql = "SELECT id, name, price FROM things WHERE id=?"
+        # Get the subject details from the DB
+        sql = "SELECT id, name, teacher, priority FROM subjects WHERE id=?"
         params = [id]
         result = client.execute(sql, params)
 
         # Did we get a result?
         if result.rows:
             # yes, so show it on the page
-            thing = result.rows[0]
-            return render_template("pages/thing.jinja", thing=thing)
+            subject = result.rows[0]
+
+            # Get all the assessments from the DB
+            sql = """
+                SELECT id, name, due_date, priority, completed
+                FROM assessments 
+                WHERE subject_id = ?
+                ORDER BY priority ASC
+            """
+            params = [id]
+            result = client.execute(sql, params)
+            assessments = result.rows
+
+
+            return render_template("pages/subject.jinja", subject=subject, assessments=assessments)
 
         else:
             # No, so show error

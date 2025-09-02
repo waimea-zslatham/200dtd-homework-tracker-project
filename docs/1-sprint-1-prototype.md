@@ -14,7 +14,11 @@ Develop a prototype that simulates the key functionality of the system, then tes
 
 The base of how my Homework Tracker works. I will use the main page to send off in directions you want to go. For this its the base of your subjects and in each one is your work.
 
+## Homework Tracker DrawSQL v1
 ![Alt text](image.png)
+
+## Homework Tracker DrawSQL v2
+![Alt text](image-2.png)
 
 
 ---
