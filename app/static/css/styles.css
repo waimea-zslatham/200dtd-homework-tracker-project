@@ -3,18 +3,15 @@
 =====================================================*/
 
 
-/* ABOUT PAGE -------------------------------------------- */
+/* FORMS -------------------------------------------- */
 
-#tech-stack {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
+form.action-button {
+    display: inline;
 }
 
-#tech-stack article {
-    flex: 1;
+form.action-button button {
+    padding: 0.1em 0.3em;
 }
-
 
 /* MESSAGES -------------------------------------------- */
 

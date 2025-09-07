@@ -25,10 +25,17 @@
             {% for assessment in assessments %}
 
                 <li>
-                        {{ assessment.name }} - {{ assessment.due_date }}
-            {% if assessment completed = ☑%}
-
-            {% else = ☐%}
+                    {{ assessment.name }} - {{ assessment.due_date }}
+                    
+                    {% if assessment.completed == 1 %}
+                        <form class="action-button" method="post" action="/subject/{{ subject.id }}/assessment/{{ assessment.id }}/not.done">
+                            <button>🗹</button>
+                        </form>
+                    {% else %}
+                        <form class="action-button" method="post" action="/subject/{{ subject.id }}/assessment/{{ assessment.id }}/done">
+                            <button>☐</button>
+                        </form>
+                    {% endif %}
                 </li>
 
             {% else %}

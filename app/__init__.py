@@ -77,6 +77,37 @@ def show_subject(id):
 
 
 #-----------------------------------------------------------
+# Route for checking a thing, using data posted from a form
+#-----------------------------------------------------------
+@app.post("/subject/<int:sid>/assessment/<int:aid>/done")
+def mark_assessment_done(sid, aid):
+    with connect_db() as client:
+        # Add the thing to the DB
+        sql = "UPDATE assessments SET completed=1 WHERE id=?"
+        params = [aid]
+        client.execute(sql, params)
+
+        # Go back to the home page
+        # flash(f"Assessment Completed", "success")
+        return redirect(f"/subject/{sid}")
+
+#-----------------------------------------------------------
+# Route for unchecking a thing, using data posted from a form
+#-----------------------------------------------------------
+@app.post("/subject/<int:sid>/assessment/<int:aid>/not.done")
+def mark_assessment_notdone(sid, aid):
+    with connect_db() as client:
+        # Add the thing to the DB
+        sql = "UPDATE assessments SET completed=0 WHERE id=?"
+        params = [aid]
+        client.execute(sql, params)
+
+        # Go back to the home page
+        # flash(f"Assessment Not completed", "success")
+        return redirect(f"/subject/{sid}")
+
+
+#-----------------------------------------------------------
 # Route for adding a thing, using data posted from a form
 #-----------------------------------------------------------
 @app.post("/add")
