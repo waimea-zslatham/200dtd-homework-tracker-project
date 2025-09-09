@@ -110,24 +110,23 @@ def mark_assessment_notdone(sid, aid):
 #-----------------------------------------------------------
 # Route for adding a thing, using data posted from a form
 #-----------------------------------------------------------
-@app.post("/add")
+@app.post("/add/subject")
 def add_a_thing():
     # Get the data from the form
-    name  = request.form.get("name")
-    price = request.form.get("price")
+    subject  = request.form.get("subject")
+    priority = request.form.get("priority")
+    teacher = request.form.get("teacher")
 
-    # Sanitise the text inputs
-    name = html.escape(name)
 
     with connect_db() as client:
         # Add the thing to the DB
-        sql = "INSERT INTO things (name, price) VALUES (?, ?)"
-        params = [name, price]
+        sql = "INSERT INTO subjects (name, teacher, priority) VALUES (?, ?, ?)"
+        params = [subject, teacher, priority]
         client.execute(sql, params)
 
         # Go back to the home page
-        flash(f"Thing '{name}' added", "success")
-        return redirect("/things")
+        #flash(f"Thing '{subject}' added", "success")
+        return redirect(f"/")
 
 
 #-----------------------------------------------------------
@@ -137,12 +136,12 @@ def add_a_thing():
 def delete_a_thing(id):
     with connect_db() as client:
         # Delete the thing from the DB
-        sql = "DELETE FROM things WHERE id=?"
+        sql = "DELETE FROM subjects WHERE id=?"
         params = [id]
         client.execute(sql, params)
 
         # Go back to the home page
-        flash("Thing deleted", "success")
-        return redirect("/things")
+        #flash("subject deleted", "success")
+        return redirect(f"/")
 
 

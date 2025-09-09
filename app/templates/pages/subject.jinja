@@ -25,6 +25,7 @@
             {% for assessment in assessments %}
 
                 <li>
+                <a href="/assessment/{{ assessment.id }}"></a>
                     {{ assessment.name }} - {{ assessment.due_date }}
                     
                     {% if assessment.completed == 1 %}
@@ -44,6 +45,41 @@
 
             {% endfor %}
         </ul>
+
+    </article>
+
+    <article>
+
+        <h3>Add a New Assessment</h3>
+
+        <form action="/add/assessment" method="POST">
+
+            <input
+                type="text"
+                name="assessment"
+                placeholder="Name of Assessment"
+                required
+            >
+
+            <input
+                type="number"
+                name="priority"
+                min="0"
+                max="5"
+                placeholder="Priority of Assessment"
+                required
+            >
+
+            <input
+                type="text"
+                name="date"
+                placeholder="Due Date"
+                Required
+            >
+
+            <button>Add the Thing</button>
+
+        </form>
 
     </article>
 

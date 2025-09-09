@@ -29,14 +29,56 @@
                     <a href="/subject/{{ subject.id }}">
                         {{ subject.name }} - {{ subject.teacher }}
                     </a>
-                </li>
+
+                <form class="delete-button"="/delete/subject/{{ subject.id }}" method="POST" style="display:inline;">
+
+                <button>🗑</button>
+            </form>
 
             {% else %}
 
                 <p>None!</p>
 
             {% endfor %}
+           
         </ul>
+
+    </article>
+
+ <article>
+
+        <h3>Add a New Subject</h3>
+
+        <form action="/add/subject" method="POST">
+
+            <input
+                type="text"
+                name="subject"
+                placeholder="Name of Subject"
+                required
+            >
+
+            <input
+                type="number"
+                name="priority"
+                min="0"
+                max="5"
+                placeholder="Priority of Subject"
+                required
+            >
+
+             <input
+                type="text"
+                name="teacher"
+                placeholder="Teacher of Subject"
+                required
+            >
+
+            <button>Add the Thing</button>
+             </form>
+
+
+        </form>
 
     </article>
 

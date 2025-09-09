@@ -13,6 +13,10 @@ form.action-button button {
     padding: 0.1em 0.3em;
 }
 
+form.delete-button button {
+    padding: 0.005em 0.003em;
+}
+
 /* MESSAGES -------------------------------------------- */
 
 #messages ul {
