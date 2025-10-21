@@ -11,18 +11,12 @@ My project will be a Homework Tracker. The user will have the option of adding s
 to add homework or assignments for each one. You can order them by priority in a list and you can check off if each assessment is done in each one and on the home page
 if the subjects work is all completed.
 
-- Usability Implications
-- Functionality Implications
-- Aesthetic Implications
-- End-User Implications
-- Accessibility Implications
-
-
 ---
 
 ## Project Links
 
-- [GitHub repo for the project](https://...)
+- [GitHub repo for the project](https://github.com/waimea-zslatham/200dtd-homework-tracker-project)
+- [Project Documentation](https://waimea-zslatham.github.io/200dtd-homework-tracker-project/)
 - [Live web app](https://...)
 
 

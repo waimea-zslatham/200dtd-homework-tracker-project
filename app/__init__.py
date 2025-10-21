@@ -25,6 +25,7 @@ init_error(app)     # Handle errors and exceptions
 init_datetime(app)  # Handle UTC dates in timestamps
 
 
+
 #-----------------------------------------------------------
 # Home page route
 #-----------------------------------------------------------
