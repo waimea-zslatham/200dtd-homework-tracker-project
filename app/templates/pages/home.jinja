@@ -4,7 +4,6 @@
   - List of things passed in as 'things' array
   - Form for adding a new thing
 =====================================================#}
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {% extends 'pages/base.jinja' %}
 
@@ -26,15 +25,18 @@
         <ul>
             {% for subject in subjects %}
 
-                <li>
+            <li>
                     <a href="/subject/{{ subject.id }}">
                         {{ subject.name }} - {{ subject.teacher }}
                     </a>
 
-                <form class="delete-button"="/delete/subject/{{ subject.id }}" method="POST" style="display:inline;">
-
-                <button>🗑</button>
-            </form>
+                <a href="/delete/{{ subject.id }}" 
+                    class="delete-button"
+                    style="color:red;"
+                    onclick="return confirm('Are you sure you want to delete {{ subject.name }}?');">
+                    🗑
+                </a>
+            </li>
 
             {% else %}
 
@@ -48,6 +50,11 @@
 
  <article>
 
+        <details>
+            <summary>
+                +    
+            </summary>
+            
         <h3>Add a New Subject</h3>
 
         <form action="/add/subject" method="POST">

@@ -128,6 +128,27 @@ def add_a_thing():
         # Go back to the home page
         #flash(f"Thing '{subject}' added", "success")
         return redirect(f"/")
+    
+
+#-----------------------------------------------------------
+# Route for adding an assessment to a specific subject
+#-----------------------------------------------------------
+@app.post("/subject/<int:sid>/add/assessment")
+def add_assessment(sid):
+    # Get data from the form
+    name = request.form.get("assessment")
+    priority = request.form.get("priority")
+    due_date = request.form.get("date")
+
+    with connect_db() as client:
+        sql = """
+            INSERT INTO assessments (name, due_date, priority, completed, subject_id)
+            VALUES (?, ?, ?, 0, ?)
+        """
+        params = [name, due_date, priority, sid]
+        client.execute(sql, params)
+
+        return redirect(f"/subject/{sid}")
 
 
 #-----------------------------------------------------------
@@ -145,4 +166,18 @@ def delete_a_thing(id):
         #flash("subject deleted", "success")
         return redirect(f"/")
 
+
+#-----------------------------------------------------------
+# Route for deleting an assessment
+#-----------------------------------------------------------
+@app.get("/subject/<int:sid>/delete/assessment/<int:aid>")
+def delete_assessment(sid, aid):
+    with connect_db() as client:
+        # Delete the assessment from the DB
+        sql = "DELETE FROM assessments WHERE id=?"
+        params = [aid]
+        client.execute(sql, params)
+
+        # Go back to the subject page
+        return redirect(f"/subject/{sid}")
 

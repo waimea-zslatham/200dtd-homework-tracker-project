@@ -32,10 +32,27 @@
                         <form class="action-button" method="post" action="/subject/{{ subject.id }}/assessment/{{ assessment.id }}/not.done">
                             <button>🗹</button>
                         </form>
+
+                <a href="/subject/{{ subject.id }}/delete/assessment/{{ assessment.id }}" 
+                    class="delete-button"
+                    style="color:red;"
+                    onclick="return confirm('Are you sure you want to delete {{ assessment.name }}?');">
+                    🗑
+                </a>
+
                     {% else %}
                         <form class="action-button" method="post" action="/subject/{{ subject.id }}/assessment/{{ assessment.id }}/done">
                             <button>☐</button>
                         </form>
+
+                <a href="/subject/{{ subject.id }}/delete/assessment/{{ assessment.id }}" 
+                    class="delete-button"
+                    style="color:red;"
+                    onclick="return confirm('Are you sure you want to delete {{ assessment.name }}?');">
+                    🗑
+                </a>
+
+
                     {% endif %}
                 </li>
 
@@ -50,36 +67,42 @@
 
     <article>
 
-        <h3>Add a New Assessment</h3>
+        <details>
+            <summary>
+                +    
+            </summary>
 
-        <form action="/add/assessment" method="POST">
+            <h3>Add a New Assessment</h3>
+            <form action="/subject/{{ subject.id }}/add/assessment" method="POST">
 
-            <input
-                type="text"
-                name="assessment"
-                placeholder="Name of Assessment"
-                required
-            >
+                <input
+                    type="text"
+                    name="assessment"
+                    placeholder="Name of Assessment"
+                    required
+                >
 
-            <input
-                type="number"
-                name="priority"
-                min="0"
-                max="5"
-                placeholder="Priority of Assessment"
-                required
-            >
+                <input
+                    type="number"
+                    name="priority"
+                    min="0"
+                    max="5"
+                    placeholder="Priority of Assessment"
+                    required
+                >
 
-            <input
-                type="text"
-                name="date"
-                placeholder="Due Date"
-                Required
-            >
+                <input
+                    type="text"
+                    name="date"
+                    placeholder="Due Date"
+                    required
+                >
 
-            <button>Add the Thing</button>
+                <button>Add the Thing</button>
+            </form>
 
-        </form>
+        </details>
+
 
     </article>
 
