@@ -21,38 +21,40 @@ The Homework Tracker will be a website where you can create a base subject with 
 
 The key functionality of the web app was implemented:
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE SYSTEM HERE**
+![Alt text](image-4.png)
 
 
 ---
 
-## Testing FEATURE NAME HERE
+## Adding Teacher and Priority
 
-Replace this text with notes about what you are testing, how you tested it, and the outcome of the testing
+For my project I wanted the user to be able to add their teachers names for each subject and the priority of the subject to them and their studies. Currently all you can do is add subject and thats it. So I am testing adding teacher and priority and making it a part of the form process through post and hopefully it will be added with the subject when the user clicks add.
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
+![Alt text](image-7.png)
+![Alt text](image-8.png)
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
+I now added the post method for the forms allowing the user to now add teacher names and priority for each subject. The end-user finds this really useful.
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
-
+![Alt text](image-10.png)
+![Alt text](image-11.png)
 
 ---
 
-## Testing FEATURE NAME HERE
+## Delete Functions
 
-Replace this text with notes about what you are testing, how you tested it, and the outcome of the testing
+I am trying to get a delete function working so the user, once done with subjects, can delete their subject all together. Right now they only stack up on subjects without the option to remove them. I will add it in the home page below the adding function and add a delete trashcan to represent how they delete their subjects.
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
+![Alt text](image-12.png)
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
+I have successfully added a delete function and added the message to make sure the user does in fact want to delete their subject. It comes as a trashcan form for the user to click.
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
-
+![Alt text](image-13.png)
+![Alt text](image-14.png)
+![Alt text](image-15.png)
 
 ---
 
