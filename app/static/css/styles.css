@@ -40,3 +40,81 @@ details summary {
 
 #messages .message.success { color: var(--pico-color-green-500); }
 #messages .message.error   { color: var(--pico-color-red-500); }
+
+/* Root to do with checkboxes and layout for them */
+:root {
+    --pico-color-primary: var(--pico-color-indigo-500);
+    --pico-color-primary-hover: var(--pico-color-indigo-600);
+    --pico-color-background: var(--pico-color-slate-50);
+    --pico-border-radius: 0.6rem;
+  }
+  
+  /* Body color look for website*/
+  body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--pico-color-background);
+    color: #222;
+    padding: 1rem;
+  }
+  
+  /* Fancy list layout for assessments/subjects */
+  article li {
+    background: white;
+    padding: 0.8rem 1rem;
+    border-radius: var(--pico-border-radius);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    margin: 0.5rem 0;
+    transition: 0.2s;
+  }
+  
+  /* Subject/Assessment Hovers*/
+  article li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Buttons color */
+    button {
+    background-color: var(--pico-color-primary);
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: var(--pico-border-radius);
+    cursor: pointer;
+  }
+  
+  /* Hover color for checkboxes*/
+  button:hover {
+    background-color: var(--pico-color-primary-hover);
+  }
+
+  /*/ Dates for Assessments*/
+  .assessment-info small {
+    display: inline-block;
+    margin-left: 0.4rem;
+    padding: 0.2rem 0.6rem;
+    background-color: var(--pico-color-slate-200);
+    color: var(--pico-color-slate-700);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    letter-spacing: 0.3px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /* Make the date pop slightly on hover */
+  .assessment-info small:hover {
+    background-color: var(--pico-color-slate-300);
+    color: var(--pico-color-slate-900);
+  }
+
+  .priority {
+    display: inline-block;
+    border: 2px solid #666;
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin-right: 10px;
+    font-weight: bold;
+    background-color: #f9f9f9;
+}

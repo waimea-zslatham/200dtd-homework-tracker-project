@@ -10,9 +10,9 @@ Develop a bare-bones, working web application that provides the key functionalit
 
 ## Implemented Database Schema
 
-Replace this text with notes regarding the DB schema.
+The Homework Tracker will be a website where you can create a base subject with teacher and priority of the subject to your studies. Then in each subject you can add work and assessments that you want to track to complete. Being ablew to display them by priority and add their due dates too!
 
-![SCREENSHOT OF DB SCHEMA](screenshots/example.png)
+![Alt text](image-1.png)
 
 
 ---

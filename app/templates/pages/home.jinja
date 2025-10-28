@@ -22,29 +22,25 @@
   
     <article>
 
-        <ul>
-            {% for subject in subjects %}
-
+            <ul class="(subject-list)">
+                {% for subject in subjects %}
             <li>
-                    <a href="/subject/{{ subject.id }}">
-                        {{ subject.name }} - {{ subject.teacher }}
-                    </a>
+                <span class="priority">{{ subject.priority }}</span>
+                <a href="/subject/{{ subject.id }}">
+                {{ subject.name }} - {{ subject.teacher }}
+                </a>
 
                 <a href="/delete/{{ subject.id }}" 
-                    class="delete-button"
-                    style="color:red;"
-                    onclick="return confirm('Are you sure you want to delete {{ subject.name }}?');">
-                    🗑
+                class="delete-button"
+                style="color:red;"
+                onclick="return confirm('Are you sure you want to delete {{ subject.name }}?');">
+                🗑
                 </a>
             </li>
-
             {% else %}
-
-                <p>None!</p>
-
+            <p>None!</p>
             {% endfor %}
-           
-        </ul>
+            </ul>
 
     </article>
 

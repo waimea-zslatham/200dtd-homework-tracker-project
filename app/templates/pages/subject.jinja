@@ -21,47 +21,36 @@
 
     <article>
 
-      <ul>
-            {% for assessment in assessments %}
+            <ul class="assessment-list">
+                {% for assessment in assessments %}
+        <li>
+            <span class="priority">{{ assessment.priority }}</span>
 
-                <li>
-                <a href="/assessment/{{ assessment.id }}"></a>
-                    {{ assessment.name }} - {{ assessment.due_date }}
-                    
-                    {% if assessment.completed == 1 %}
-                        <form class="action-button" method="post" action="/subject/{{ subject.id }}/assessment/{{ assessment.id }}/not.done">
-                            <button>🗹</button>
-                        </form>
+            <span class="assessment-info">
+                {{ assessment.name }} — <small>{{ assessment.due_date }}</small>
+            </span>
 
-                <a href="/subject/{{ subject.id }}/delete/assessment/{{ assessment.id }}" 
-                    class="delete-button"
-                    style="color:red;"
-                    onclick="return confirm('Are you sure you want to delete {{ assessment.name }}?');">
-                    🗑
-                </a>
-
-                    {% else %}
-                        <form class="action-button" method="post" action="/subject/{{ subject.id }}/assessment/{{ assessment.id }}/done">
-                            <button>☐</button>
-                        </form>
-
-                <a href="/subject/{{ subject.id }}/delete/assessment/{{ assessment.id }}" 
-                    class="delete-button"
-                    style="color:red;"
-                    onclick="return confirm('Are you sure you want to delete {{ assessment.name }}?');">
-                    🗑
-                </a>
-
-
-                    {% endif %}
-                </li>
-
+            {% if assessment.completed == 1 %}
+                <form class="action-button" method="post" action="/subject/{{ subject.id }}/assessment/{{ assessment.id }}/not.done">
+                    <button title="Mark not done">🗹</button>
+                </form>
             {% else %}
+                <form class="action-button" method="post" action="/subject/{{ subject.id }}/assessment/{{ assessment.id }}/done">
+                    <button title="Mark done">☐</button>
+                </form>
+            {% endif %}
 
-                <p>None!</p>
-
-            {% endfor %}
-        </ul>
+            <a href="/subject/{{ subject.id }}/delete/assessment/{{ assessment.id }}" 
+               class="delete-button"
+               style="color:red;"
+               onclick="return confirm('Are you sure you want to delete {{ assessment.name }}?');">
+               🗑
+            </a>
+        </li>
+    {% else %}
+        <p>None!</p>
+    {% endfor %}
+</ul>
 
     </article>
 
