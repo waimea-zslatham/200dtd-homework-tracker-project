@@ -21,54 +21,49 @@ The Homework Tracker will be a website where you can create a base subject with 
 
 The key functionality of the web app was implemented:
 
-![Alt text](image-4.png)
-
+![alt text](<screenshots/Initial Implementation.gif>)
 
 ---
 
-## Adding Teacher and Priority
+## Adding Teacher and Priority (Subjects)
 
 For my project I wanted the user to be able to add their teachers names for each subject and the priority of the subject to them and their studies. Currently all you can do is add subject and thats it. So I am testing adding teacher and priority and making it a part of the form process through post and hopefully it will be added with the subject when the user clicks add.
 
-![Alt text](image-7.png)
-![Alt text](image-8.png)
+![alt text](<screenshots/Teacher and Priority Initial.png>)
 
 ### Changes / Improvements
 
 I now added the post method for the forms allowing the user to now add teacher names and priority for each subject. The end-user finds this really useful.
 
-![Alt text](image-10.png)
-![Alt text](image-11.png)
+![alt text](<screenshots/Adding Teacher and Priority Complete.gif>)
 
 ---
 
-## Delete Functions
+## Delete Function
 
 I am trying to get a delete function working so the user, once done with subjects, can delete their subject all together. Right now they only stack up on subjects without the option to remove them. I will add it in the home page below the adding function and add a delete trashcan to represent how they delete their subjects.
 
-![Alt text](image-12.png)
+![alt text](<screenshots/Delete Function Initial.gif>)
 
 ### Changes / Improvements
 
 I have successfully added a delete function and added the message to make sure the user does in fact want to delete their subject. It comes as a trashcan form for the user to click.
 
-![Alt text](image-13.png)
-![Alt text](image-14.png)
-![Alt text](image-15.png)
+![alt text](<screenshots/Delete Function Complete.gif>)
 
 ---
 
-## Testing FEATURE NAME HERE
+## Adding Due Date and Priority (Assessments)
 
-Replace this text with notes about what you are testing, how you tested it, and the outcome of the testing
+I am updating the forms for Assessments to allow the user to add the due date and prioirty for their assessments for each subjects. The assessments/homework will be organised by priority allowing the user to add their custom due dates to allow timeframes.
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
+![alt text](<screenshots/Adding Due Dates and Priority Initial.gif>)
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
+I have now added, just like the subjects page, the ability to add your priority and due dates for each assessment. Priority is 1 - 5 while due dates is written out perferably as 2025-29-10.
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
+![alt text](<screenshots/Adding Due Dates and Priority Complete.gif>)
 
 
 ---
