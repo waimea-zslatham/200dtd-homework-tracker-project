@@ -109,7 +109,7 @@ def mark_assessment_notdone(sid, aid):
 
 
 #-----------------------------------------------------------
-# Route for adding a thing, using data posted from a form
+# Route for adding a subject, using data posted from a form
 #-----------------------------------------------------------
 @app.post("/add/subject")
 def add_a_thing():
@@ -152,12 +152,12 @@ def add_assessment(sid):
 
 
 #-----------------------------------------------------------
-# Route for deleting a thing, Id given in the route
+# Route for deleting a subject, Id given in the route
 #-----------------------------------------------------------
 @app.get("/delete/<int:id>")
 def delete_a_thing(id):
     with connect_db() as client:
-        # Delete the thing from the DB
+        # Delete the subject from the DB
         sql = "DELETE FROM subjects WHERE id=?"
         params = [id]
         client.execute(sql, params)
