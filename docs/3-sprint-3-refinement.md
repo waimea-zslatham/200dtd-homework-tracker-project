@@ -21,7 +21,7 @@ The Homework Tracker will be a website where you can create a base subject with 
 
 The web app is fully implemented with a refined UI:
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE SYSTEM HERE**
+![alt text](<screenshots/Sprint-3/Homework Tracker Final.gif>)
 
 
 ---
