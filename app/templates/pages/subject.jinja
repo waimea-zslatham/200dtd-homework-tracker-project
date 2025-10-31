@@ -97,30 +97,5 @@
 
     <a role="button" href="/">Back to Subjects</a>
 
-    <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const subjectName = "{{ subject.name }}";
-  const forms = document.querySelectorAll(".action-button");
-
-  // Make sure we have a stored list for this subject
-  let stored = JSON.parse(localStorage.getItem("homeworkProgress")) || {};
-  if (!stored[subjectName]) {
-    stored[subjectName] = {};
-  }
-
-  forms.forEach(form => {
-    form.addEventListener("submit", () => {
-      const action = form.action;
-      const isDone = action.includes("/done");
-      const assessmentName = form.parentElement.querySelector(".assessment-info").textContent.trim();
-
-      stored[subjectName][assessmentName] = isDone;
-      localStorage.setItem("homeworkProgress", JSON.stringify(stored));
-    });
-  });
-});
-</script>
-
-
 {% endblock %}
 

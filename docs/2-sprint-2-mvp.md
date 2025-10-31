@@ -182,22 +182,7 @@ I have now added it where the user can either input their dates themselves or cl
 
 ---
 
-## Testing FEATURE NAME HERE
-
-Replace this text with notes about what you are testing, how you tested it, and the outcome of the testing
-
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
-
-### Changes / Improvements
-
-Replace this text with notes any improvements you made as a result of the testing.
-
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
-
-
----
-
 
 ## Sprint Review
 
-Replace this text with a statement about how the sprint has moved the project forward - key success point, any things that didn't go so well, etc.
+This sprint has seen to move my project forward as I have seen improvement through testing and trialing and speaking to my end user and teacher to improve my webpage. It has now led to a succeeding webpage that does exactly what I want. From the start to now you can see how it has evolved and how much more it does. It provides users with a webpage they will find so useful for their needs.

@@ -36,12 +36,6 @@
                 onclick="return confirm('Are you sure you want to delete {{ subject.name }}?');">
                 🗑
                 </a>
-
-                <h4>Overall Progress</h4>
-                    <div id="progress-container">
-                        <div id="progress-bar"></div>
-                    </div>
-                <p id="progress-text">0% Complete</p>
             </li>
             {% else %}
             <p>None!</p>
@@ -91,30 +85,6 @@
         </form>
 
     </article>
-
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const stored = JSON.parse(localStorage.getItem("homeworkProgress")) || {};
-  let total = 0, completed = 0;
-
-  // Count total & completed across all subjects
-  for (const subject in stored) {
-    for (const task in stored[subject]) {
-      total++;
-      if (stored[subject][task]) completed++;
-    }
-  }
-
-  const percent = total === 0 ? 0 : Math.round((completed / total) * 100);
-
-  const bar = document.getElementById("progress-bar");
-  const text = document.getElementById("progress-text");
-
-  bar.style.width = percent + "%";
-  text.textContent = `${percent}% Complete`;
-});
-</script>
-
 
 {% endblock %}
 
