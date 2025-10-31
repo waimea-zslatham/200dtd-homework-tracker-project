@@ -180,4 +180,3 @@ def delete_assessment(sid, aid):
 
         # Go back to the subject page
         return redirect(f"/subject/{sid}")
-
